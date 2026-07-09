@@ -22,3 +22,8 @@ destination IP: 10.0.2.15
 protocol      : TCP
 payload:
 b'\x17\x03\x03\x00W...'
+
+How it works
+The script uses Scapy's sniff() function with a callback that runs on every captured packet. It checks for an IP layer, then inspects for TCP/UDP layers, and prints the raw payload if present.
+Disclaimer
+This tool is for educational purposes and authorized network analysis only. Only use it on networks you own or have explicit permission to monitor.
